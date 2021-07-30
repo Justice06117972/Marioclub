@@ -143,27 +143,75 @@ form input:valid {
   border: 4px solid #71d300;
 }
 
-article p::first-line{
+article p::first-line {
   font-weight: bold;
   font-size: 1.2em;
 }
 
-section.join p::first-letter{
+section.join p::first-letter {
   font-size: 1.5em;
 }
-p::selection{
+p::selection {
   background-color: red;
   color: white;
 }
 
-p::after{
-  content: '...';
+p::after {
+  content: "...";
 }
 
 /* Reponsive Style */
 
 @media screen and (max-width: 1400px) {
-  .banner .wellcome h2{
+  .banner .wellcome h2 {
     font-size: 60px;
+  }
+  nav li {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .banner .wellcome h2 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .banner .wellcome {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+  }
+  .banner .wellcome br {
+    display: none;
+  }
+  .banner .wellcome h2 {
+    font-size: 25px;
+  }
+  .banner .wellcome span {
+    text-transform: lowercase;
+    font-size: 1em;
+  }
+  .images li {
+    width: 100%;
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  nav li {
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+    text-align: center;
+  }
+  header {
+    position: relative;
+  }
+  nav {
+    top: 0;
   }
 }
